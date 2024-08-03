@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Item</title>
+    <link rel="stylesheet" href="styleSellForm.css">
+</head>
+<body>
+    <nav class="navIndex">
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/localNews.html">Local News</a></li>
+            <li><a href="/announcements.html">Announcements</a></li>
+            <li><a href="/marketplace.html">Marketplace</a></li>
+            <li><a href="/communityCalendar.html">Community Calendar</a></li>
+            <li><a href="/suspiciousActivity.html">Suspicious Activity</a></li>
+            <li><a href="/localMap.html">Local Map</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="form-container">
+            <form id="sellForm">
+                <label for="itemImage">Upload Image:</label>
+                <input type="file" id="itemImage" accept="image/png, image/jpeg" title="Upload a PNG or JPEG image only" required>
+
+                <label for="itemTitle">Title:</label>
+                <input type="text" id="itemTitle" maxlength="50" placeholder="Enter the product name" required>
+
+                <label for="itemPrice">Price (€):</label>
+                <input type="text" id="itemPrice" placeholder="Enter the price" required>
+
+                <label for="itemDescription">Description:</label>
+                <textarea id="itemDescription" maxlength="250" placeholder="Enter a brief description of the product" required></textarea>
+
+                <label for="itemMobile">Mobile Number:</label>
+                <input type="tel" id="itemMobile" pattern="^08\d{8}$" placeholder="Enter your 10 digit mobile number" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+    <script src="sellForm.js"></script>
+</body>
+</html>

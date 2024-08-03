@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+  <link rel="stylesheet" href="styleIndex.css">
+  <link rel="stylesheet" href="styleProfile.css">
+</head>
+<body>
+  <nav class="navIndex">
+    <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/localNews.html">Local News</a></li>
+        <li><a href="/announcements.html">Announcements</a></li>
+        <li><a href="/marketplace.html">Marketplace</a></li>
+        <li><a href="/communityCalendar.html">Community Calendar</a></li>
+        <li><a href="/suspiciousActivity.html">Suspicious Activity</a></li>
+        <li><a href="/warningsPage.html">Warnings</a></li>
+        <li><a href="/localMap.html">Local Map</a></li>
+        <li><a href="/profile.html">User Profile</a></li>
+    </ul>
+</nav>
+<main>
+  <div class="profile-container">
+    <h2>My Profile</h2>
+    <div id="profileDetails">
+      <p><strong>Username:</strong> <span id="profileUsername"></span></p>
+      <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+      <p><strong>First Name:</strong> <span id="profileFirstName"></span></p>
+      <p><strong>Last Name:</strong> <span id="profileLastName"></span></p>
+      <p><strong>Member Since:</strong> <span id="profileMemberSince"></span></p>
+      <p><strong>Profile Picture:</strong> <img id="profilePicture" src="" alt="Profile Picture" /></p>
+    </div>
+    <button id="editProfileButton">Edit Profile</button>
+    <div id="editProfileForm" style="display: none;">
+      <label for="editUsername">Username:</label>
+      <input type="text" id="editUsername" name="username">
+
+      <label for="editEmail">Email:</label>
+      <input type="email" id="editEmail" name="email">
+
+      <label for="editFirstName">First Name:</label>
+      <input type="text" id="editFirstName" name="first_name">
+
+      <label for="editLastName">Last Name:</label>
+      <input type="text" id="editLastName" name="last_name">
+
+      <label for="editBio">Bio:</label>
+      <textarea id="editBio" name="bio"></textarea>
+
+      <label for="editProfilePicture">Profile Picture:</label>
+      <input type="file" id="editProfilePicture" name="profile_picture">
+      <img id="profilePicturePreview" src="" alt="Profile Picture Preview" style="display: none; max-width: 100%; height: auto;">
+
+      <button id="saveProfileButton">Save</button>
+      <button id="cancelEditButton">Cancel</button>
+    </div>
+    <p id="message"></p>
+  </div>
+</main>
+<script src="profile.js"></script>
+</body>
+</html>

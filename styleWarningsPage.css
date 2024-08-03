@@ -1,0 +1,120 @@
+html, h1, h2, h3 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+main {
+    margin: 50px 10px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav > ul {
+    display: flex;
+    
+}
+
+nav > ul > li {
+    list-style: none;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 5px;
+    color: black;
+}
+
+nav > ul > li:nth-child(3) {
+    font-weight: bold;
+}
+
+nav > ul > li > a:hover {
+    background-color: rgb(224, 224, 224);
+}
+
+.search > input {
+    background-image: url(/search.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    padding: 5px 5px 5px 25px;
+    background-position: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(202, 202, 202);
+    min-width: 240px;
+    margin-right: 10px;
+}
+
+.search > button {
+    background-image: url(/sort.png);
+    padding: 5px 5px 5px 25px;
+    background-position: 5px;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid rgb(197, 197, 197);
+    color: rgb(140, 140, 140);
+}
+
+table {
+    border-collapse: collapse;
+    margin: 20px 5px;
+}
+
+tr {
+    border-bottom: 1px solid rgb(202, 202, 202);
+}
+
+th {
+    text-align: left;
+    font-size: 18px;
+}
+
+th, td {
+    padding: 10px 0;
+    padding-right: 60px;
+}
+
+td {
+    font-size: 15px;
+}
+
+td > span {
+    font-weight: bold;
+    color: rgb(159, 159, 159);
+}
+
+.avatar {
+    background-image: url(/new-moon.png);
+    width: 25px;
+    height: 25px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    margin-left: 7px;
+}
+
+.menu {
+    background-image: url(/option.png);
+    width: 25px;
+    height: 25px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    margin-left: 7px;
+    float: right;
+    margin-right: 10px;
+}
+
+tr > td:nth-child(5) {
+    padding-right: 0;
+}

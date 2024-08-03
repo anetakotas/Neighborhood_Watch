@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Map</title>
+    <link rel="stylesheet" href="styleLocalMap.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/localNews.html">Local News</a></li>
+            <li><a href="/announcements.html">Announcements</a></li>
+            <li><a href="/marketplace.html">Marketplace</a></li>
+            <li><a href="/communityCalendar.html">Community Calendar</a></li>
+            <li><a href="/suspiciousActivity.html">Suspicious Activity</a></li>
+            <li><a href="/warningsPage.html">Warnings</a></li>
+            <li><a href="/localMap.html">Local Map</a></li>
+            <li><a href="/profile.html">User Profile</a></li>
+        </ul>
+    </nav>
+    <main>
+         <iframe src="https://maps.openrouteservice.org/#/place/@-6.254739761352539,53.34816887819504,14" frameborder="0"></iframe>
+        <div>
+            <button type="button" id="findLocation" onclick="findLocation()">My Current Location</button>
+            <p id="location"></p>
+        </div>
+    </main>
+
+    <script>
+
+        function findLocation() {
+            
+        
+            var pos;
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else { 
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+            }
+
+            function showPosition(position) {
+                var lat = position.coords.latitude;
+                var long = position.coords.longitude;
+
+                pos = [
+                    lat,
+                    long
+                ];
+
+                document.getElementById('location').innerHTML = "Your location is: " + pos[1] + ", " + pos[0];
+            }
+            getLocation();
+            console.log(pos);
+        }
+
+
+    </script>
+</body>
+</html>

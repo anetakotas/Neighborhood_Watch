@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local News</title>
+    <link rel="stylesheet" href="styleLocalNews.css">
+</head>
+<body>
+    <nav class="navNews">
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/localNews.html">Local News</a></li>
+            <li><a href="/announcements.html">Announcements</a></li>
+            <li><a href="/marketplace.html">Marketplace</a></li>
+            <li><a href="/communityCalendar.html">Community Calendar</a></li>
+            <li><a href="/suspiciousActivity.html">Suspicious Activity</a></li>
+            <li><a href="/warningsPage.html">Warnings</a></li>
+            <li><a href="/localMap.html">Local Map</a></li>
+            <li><a href="/profile.html">User Profile</a></li>
+        </ul>
+    </nav>
+    <main>
+        <!-- <a class="links" href="#">
+            <div class="cardItem">
+                <img src="/360_F_415962919_gvs598wWdamZuphUvrfZag0lmYi2rL7N.jpg">
+                <div class="cardItemText">
+                    <h3>Top 10 New Businesses Opened Last Month in Coolock!</h3>
+                    <p>Check out new interesting businesses and their owners who...</p>
+                </div>
+            </div>
+        </a> -->
+        <h1>Here are the articles in your area:</h1>
+    </main>
+    <script>
+
+        async function getData() {
+            // var url = 'https://newsapi.org/v2/everything?' +
+            // 'q=Coolock&' +
+            // 'sortBy=popularity&' +
+            // 'apiKey=9bef5dcab30442d39dd5ed0a29b51d90';
+
+            fetch('https://newsapi.org/v2/everything?q=Coolock&sortBy=popularity&apiKey=9bef5dcab30442d39dd5ed0a29b51d90')
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(data) {
+                    console.log(Object.keys(data['articles']).length);
+
+
+                    for(var i = 0; i < Object.keys(data['articles']).length; i++) {
+
+                        var link = document.createElement('a');
+                        var cardItem = document.createElement('div');
+                        var image = document.createElement('img');
+                        var cardItemText = document.createElement('div');
+                        var cardHeading = document.createElement('h3');
+                        var cardDesc = document.createElement('p');
+
+                        link.href = data.articles[i].url;
+                        link.className = 'links';
+                        cardItem.className = 'cardItem';
+                        image.src = data.articles[i].urlToImage;
+                        cardItemText.className = 'cardItemText';
+                        cardHeading.innerHTML = data.articles[i].title;
+                        cardDesc.innerHTML = data.articles[i].description;
+
+                        cardItemText.appendChild(cardHeading);
+                        cardItemText.appendChild(cardDesc);
+                        cardItem.appendChild(image);
+                        cardItem.appendChild(cardItemText);
+                        link.appendChild(cardItem);
+
+                        document.body.appendChild(link);
+                    }
+                    
+                });
+        }
+        getData();
+
+    </script>
+
+    
+</body>
+</html>

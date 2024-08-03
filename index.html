@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styleIndex.css">
+</head>
+<body>
+    <nav class="navIndex">
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/localNews.html">Local News</a></li>
+            <li><a href="/announcements.html">Announcements</a></li>
+            <li><a href="/marketplace.html">Marketplace</a></li>
+            <li><a href="/communityCalendar.html">Community Calendar</a></li>
+            <li><a href="/suspiciousActivity.html">Suspicious Activity</a></li>
+            <li><a href="/warningsPage.html">Warnings</a></li>
+            <li><a href="/localMap.html">Local Map</a></li>
+            <li><a href="/profile.html">User Profile</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div>
+            <h1>Thinking what to do?</h1>
+            <div class="buttons">
+                <a href="/localNews.html">Check Out Current News</a>
+                <a id="cardLink" href="#">
+                    <div class="cardItem">
+                        <img id="cardImage" src="" alt="business">
+                        <div class="cardItemText">
+                            <h3 id="cardTitle">Top 10 New Businesses Opened Last Month in Coolock!</h3>
+                            <p id="cardDesc">Check out new interesting businesses and their owners who...</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="/warningsPage.html">Report Suspicious Activity</a>
+                <a href="/announcements.html">Check Announcements</a>
+                <a href="/communityCalendar.html">Check Upcoming Events</a>
+            </div>
+        </div>
+        <div class="calendar">
+            <a href="/communityCalendar.html"><img src="/istockphoto-181866332-612x612.jpg" alt="calendar"></a>
+            
+        </div>
+
+        <script>
+            async function getData() {
+                // var url = 'https://newsapi.org/v2/everything?' +
+                // 'q=Coolock&' +
+                // 'sortBy=popularity&' +
+                // 'apiKey=9bef5dcab30442d39dd5ed0a29b51d90';
+
+                fetch('https://newsapi.org/v2/everything?q=Coolock&sortBy=popularity&apiKey=9bef5dcab30442d39dd5ed0a29b51d90')
+                    .then(function(response) {
+                        return response.json();
+                    })
+                    .then(function(data) {
+
+                        var image = document.getElementById('cardImage');
+                        var title = document.getElementById('cardTitle');
+                        var desc = document.getElementById('cardDesc');
+                        var link = document.getElementById('cardLink');
+                        image.src = data.articles[0].urlToImage;
+                        title.innerHTML = data.articles[0].title;
+                        desc.innerHTML = data.articles[0].description;
+                        link.href = data.articles[0].url;
+                        
+                    });
+            }
+            getData();
+        </script>
+    </main>
+</body>
+</html>

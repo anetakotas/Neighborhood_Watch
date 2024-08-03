@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Calendar</title>
+    <link rel="stylesheet" href="styleCommunityCalendar.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="communityCalendar.js" defer></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/localNews.html">Local News</a></li>
+            <li><a href="/announcements.html">Announcements</a></li>
+            <li><a href="/marketplace.html">Marketplace</a></li>
+            <li><a href="/communityCalendar.html">Community Calendar</a></li>
+            <li><a href="/suspiciousActivity.html">Suspicious Activity</a></li>
+            <li><a href="/warningsPage.html">Warnings</a></li>
+            <li><a href="/localMap.html">Local Map</a></li>
+            <li><a href="/profile.html">User Profile</a></li>
+        </ul>
+    </nav>
+    <main>
+        <!--source for calendar: https://codepen.io/rickyeckhardt/pen/AwjLRw-->
+        <div id="calendar-container">
+            <div id="calendar-controls">
+                <button id="prevMonth">Previous</button>
+                <span id="currentMonth"></span>
+                <button id="nextMonth">Next</button>
+            </div>
+            <div id="fullDiv">
+                <ul id="calendar">
+                    <li>SUN</li>
+                    <li>MON</li>
+                    <li>TUE</li>
+                    <li>WED</li>
+                    <li>THUR</li>
+                    <li>FRI</li>
+                    <li>SAT</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- source for event form: https://danielpuiatti.com/the-ultimate-guide-to-building-a-calendar-of-events-in-html-css-and-javascript/ -->
+        <div id="form-container">
+            <form id="eventForm">
+                <label for="eventDate">Date:</label>
+                <input type="date" id="eventDate" required>
+                <label for="eventTime">Time:</label>
+                <input type="time" id="eventTime" required>
+                <label for="eventDescription">Description:</label>
+                <input type="text" id="eventDescription" required>
+                <button type="submit">Add Event</button>
+            </form>
+        </div>
+
+        <!-- source for overlay: https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp -->
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content" id="overlayContent">
+            </div>
+        </div>
+    </main>
+</body>
+</html>
