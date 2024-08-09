@@ -1,0 +1,12 @@
+https://www.flaticon.com/free-icon/sort_7693332?term=filter&page=1&position=7&origin=search&related_id=7693332
+
+https://www.flaticon.com/free-icon/new-moon_686700?term=circle&page=1&position=3&origin=search&related_id=686700
+
+https://www.flaticon.com/free-icon/option_3018442?term=menu&page=1&position=33&origin=search&related_id=3018442
+
+https://logos-world.net/google-maps-logo/
+
+http://api.openweathermap.org/data/2.5/forecast?mode=json&q=dublin&appid=b157ff0de20cdc39a2653a8395528883%20ID
+
+https://getbootstrap.com/
+

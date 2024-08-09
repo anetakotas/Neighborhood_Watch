@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Suspicious Activity</title>
+    <link rel="stylesheet" href="/styles/styleSuspiciousActivity.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <nav class="navIndex">
+        <ul>
+            <li><a href="/views/index.html">Home</a></li>
+            <li><a href="/views/localNews.html">Local News</a></li>
+            <li><a href="/views/announcements.html">Announcements</a></li>
+            <li><a href="/views/marketplace.html">Marketplace</a></li>
+            <li><a href="/views/communityCalendar.html">Community Calendar</a></li>
+            <li><a href="/views/suspiciousActivity.html">Suspicious Activity</a></li>
+            <li><a href="/views/warningsPage.html">Warnings</a></li>
+            <li><a href="/views/localMap.html">Local Map</a></li>
+            <li><a href="/views/profile.html">User Profile</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="form-container">
+            <form id="reportForm">
+                <h1>Report Suspicious Activity</h1>
+
+                <label for="anonymous">
+                    <input type="checkbox" id="anonymous" name="anonymous">
+                    Send an anonymous report
+                </label>
+
+                <div id="personalInfo">
+                    <label for="fullName">Name:</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name here">
+
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" placeholder="Enter your full address here">
+                </div>
+
+                <label for="reportDetails">Details:</label>
+                <textarea id="reportDetails" name="reportDetails" maxlength="1000" placeholder="Describe your concerns" required></textarea>
+
+                <button type="submit">Submit Report</button>
+            </form>
+
+            <!-- Thank you message -->
+            <div id="thank-you" style="display: none;">
+                <div class="thank-you-content">
+                    <p>Thank you for keeping our neighbourhood safe. Admins will review your report shortly and take action where necessary.</p>
+                    <button class="close-btn">&times;</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="/scripts/suspiciousActivity.js"></script>
+</body>
+</html>

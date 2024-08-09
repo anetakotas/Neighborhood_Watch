@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Map</title>
+    <link rel="stylesheet" href="/styles/styleLocalMap.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/views/index.html">Home</a></li>
+            <li><a href="/views/localNews.html">Local News</a></li>
+            <li><a href="/views/announcements.html">Announcements</a></li>
+            <li><a href="/views/marketplace.html">Marketplace</a></li>
+            <li><a href="/views/communityCalendar.html">Community Calendar</a></li>
+            <li><a href="/views/suspiciousActivity.html">Suspicious Activity</a></li>
+            <li><a href="/views/warningsPage.html">Warnings</a></li>
+            <li><a href="/views/localMap.html">Local Map</a></li>
+            <li><a href="/views/profile.html">User Profile</a></li>
+        </ul>
+    </nav>
+    <main>
+         <iframe src="https://maps.openrouteservice.org/#/place/@-6.254739761352539,53.34816887819504,14" frameborder="0"></iframe>
+        <div>
+            <button type="button" id="findLocation" onclick="findLocation()">My Current Location</button>
+            <p id="location"></p>
+        </div>
+    </main>
+
+    <script src="/scripts/localMap.js"></script>
+</body>
+</html>

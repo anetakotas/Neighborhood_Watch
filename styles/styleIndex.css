@@ -1,0 +1,104 @@
+html, h1, h2, h3 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 10px;
+}
+
+.navIndex > ul {
+    display: flex;
+}
+
+.navIndex > ul > li {
+    list-style: none;
+}
+
+.navIndex > ul > li > a {
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 5px;
+    color: black;
+}
+
+
+.navIndex > ul > li > a:hover {
+    background-color: rgb(224, 224, 224);
+}
+
+main > div > h1 {
+    font-weight: 700;
+    font-size: 55px;
+}
+
+.buttons { 
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons > a {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 15px 35px;
+    margin: 7px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.buttons > a:nth-child(2) {
+    color: black;
+    background-color: white;
+    text-align: left;
+    padding: 0;
+}
+
+.calendar img {
+    max-width: 400px;
+    margin-left: 20px;
+}
+
+.calendar {
+    padding-top: 100px;
+}
+
+.cardItem {
+    display: flex;
+    max-width: 550px;
+}
+
+.cardItem img {
+    max-width: 200px;
+    margin-right: 10px;
+}
+
+.cardItemText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    
+}
+
+.cardItemText h3,
+.cardItemText p {
+    margin: 0;
+}
+
+nav > ul > li:nth-child(1) {
+    font-weight: bold;
+}

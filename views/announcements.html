@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+    <title>Announcements Board</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/styleAnnouncements.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/views/index.html">Home</a></li>
+            <li><a href="/views/localNews.html">Local News</a></li>
+            <li><a href="/views/announcements.html">Announcements</a></li>
+            <li><a href="/views/marketplace.html">Marketplace</a></li>
+            <li><a href="/views/communityCalendar.html">Community Calendar</a></li>
+            <li><a href="/views/suspiciousActivity.html">Suspicious Activity</a></li>
+            <li><a href="/views/warningsPage.html">Warnings</a></li>
+            <li><a href="/views/localMap.html">Local Map</a></li>
+            <li><a href="/views/profile.html">User Profile</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Announcements Board</h2>
+        <div class="search">
+            <input type="text" placeholder="Search...">
+            <button>Filter</button>
+        </div>
+        <table id="tb">
+            <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Date</th>
+                <th>User</th>
+                <th></th>
+            </tr>
+            <tr>
+        </table>
+        <form>
+            <div>
+              <label for="exampleFormControlInput1">Title: </label><br>
+              <input type="text" class="title" id="title" placeholder="Announcement Title">
+            </div>
+            <div>
+              <label for="category">Announcement Category:</label><br>
+              <select class="category" id="category">
+                <option>Event</option>
+                <option>Party</option>
+                <option>Meeting</option>
+              </select>
+            </div>
+            <div>
+              <label for="content">Announcement Context:</label><br>
+              <textarea class="content" id="content" rows="8"></textarea>
+            </div>
+            <button type="submit" id="submitAnnouncement">Add Announcement</button>
+          </form>
+
+        <script src="/scripts/announcements.js"></script>
+    </main>
+</body>
+</html>
