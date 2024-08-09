@@ -38,7 +38,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
                             message.textContent = 'Registration successful';
                             message.style.color = 'green';
                             setTimeout(() => {
-                                window.location.href = `profile.html?id=${data.user._id}`;
+                                window.location.href = `/views/profile.html?id=${data.user._id}`;
                             }, 1500);
                         }
                     })
